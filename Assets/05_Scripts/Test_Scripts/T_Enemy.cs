@@ -7,11 +7,16 @@ public class T_Enemy : MonoBehaviour
     public float speed = 4.0f;
     // 타겟 따라가기
     public GameObject target;
-
+    public Transform[] moveSpot;
+    float waitTime;
+    public float startWaitTime;
+    int randomSpot;
     Vector3 dir;
     // Start is called before the first frame update
     void Start()
     {
+        waitTime = startWaitTime;
+        randomSpot = Random.Range(0, moveSpot.Length);
         // 타겟 방향으로 한번만 정하고 가기
         //// 1. 태어나서 1번 타겟 방향으로
         //dir = transform.position- target.transform.position;
@@ -36,6 +41,21 @@ public class T_Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.position = Vector2.MoveTowards(transform.position, moveSpot[randomSpot].position, speed * Time.deltaTime);
+        if (Vector2.Distance(transform.position, moveSpot[randomSpot].position) <= 0.2f)
+        {
+            if(waitTime <= 0) 
+            {
+                randomSpot = Random.Range(0, moveSpot.Length);
+                waitTime = startWaitTime;
+            }
+            else
+            {
+                waitTime -= Time.deltaTime;
+            }
+        }
+
+
         // 아래로 움직이기
         //// 1. 방향은 아래로
         //Vector3 dir = Vector3.down;

@@ -8,19 +8,19 @@ public class T_Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Rigidbody rigidbody= GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // ³»°¡ ¿øÇÏ´Â ¹æÇâÀ¸·Î ¿òÁ÷ÀÎ´Ù.
-        // 1. Å°º¸µå¸¦ ÀĞ´Â´Ù
+        // ë‚´ê°€ ì›í•˜ëŠ” ë°©í–¥ìœ¼ë¡œ ì›€ì§ì¸ë‹¤.
+        // 1. í‚¤ë³´ë“œë¥¼ ì½ëŠ”ë‹¤
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis ("Vertical");
-        // 2. ¹æÇâÀ» Á¤ÇÑ´Ù.
+        // 2. ë°©í–¥ì„ ì •í•œë‹¤.
         Vector3 dir = new Vector3(h, v,0);
-        // 3. ¿òÁ÷ÀÎ´Ù
+        // 3. ì›€ì§ì¸ë‹¤
         transform.position += dir * speed * Time.deltaTime;
     }
 }
