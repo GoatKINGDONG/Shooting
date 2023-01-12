@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 164272945}
   - component: {fileID: 164272949}
   m_Layer: 0
-  m_Name: Tail
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,7 +214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164272944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.75}
+  m_LocalPosition: {x: 3.57, y: 0, z: -0.27}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -520,10 +520,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1667189008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4cdd94909b3e0f4c8478fed4489d2ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 13cc96b3a73a23f4d827ad68704bb690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
 --- !u!1 &1683301546
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1683301546}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5b968a20de338c4e8ac47343dd2b83a, type: 3}
+  m_Script: {fileID: 11500000, guid: 885ac070a7b9cc145b3c6c6de8cad210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5

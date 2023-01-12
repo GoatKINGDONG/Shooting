@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 10.0f;
     // Start is called before the first frame update
-    // °è¼Ó À§·Î ÀÌµ¿ÇÏ°í ½Í´Ù
+    // ê³„ì† ìœ„ë¡œ ì´ë™í•˜ê³  ì‹¶ë‹¤
     void Start()
     {
         
@@ -16,8 +16,8 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         // 
-        // 2. ¹æÇâÀº À§·Î
-        // 3. ÀÌµ¿ÇÏ°í ½Í´Ù
+        // 2. ë°©í–¥ì€ ìœ„ë¡œ
+        // 3. ì´ë™í•˜ê³  ì‹¶ë‹¤
         
         
         //Vector3 dir = new Vector3(0,1, 0);

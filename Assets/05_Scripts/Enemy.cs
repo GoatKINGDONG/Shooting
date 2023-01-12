@@ -7,17 +7,17 @@ public class Enemy : MonoBehaviour
     public float speed = 5.0f;
     public GameObject target;
     
-    Vector3 dir; // Àü¿ªº¯¼ö·Î Start¿Í Update¿¡ ºÒ·¯Áöµµ·Ï ¼±¾ð
+    Vector3 dir; // ì „ì—­ë³€ìˆ˜ë¡œ Startì™€ Updateì— ë¶ˆëŸ¬ì§€ë„ë¡ ì„ ì–¸
     // Start is called before the first frame update
     void Start()
     {
         int percent = Random.Range(1, 101);
-        // ÇÑ¹ø¿¡ ¹æÇâÀâ±â
-        // ÅÂ¾î³¯ ¶§ µü ÇÑ¹ø Å¸°Ù ¹æÇâÀ¸·Î Ã£°í
+        // í•œë²ˆì— ë°©í–¥ìž¡ê¸°
+        // íƒœì–´ë‚  ë•Œ ë”± í•œë²ˆ íƒ€ê²Ÿ ë°©í–¥ìœ¼ë¡œ ì°¾ê³ 
         //dir = target.transform.position - transform.position;
-        //dir.Normalize(); // ´ë°¢¼± ¼Óµµ ¸ÂÃß±â ¼Ó·Â x ÈûÀÇ Å©±â x ¹æÇâ -> ÈûÀÇ Å©±â¸¦ 1·Î ¸ÂÃß´Â °Í ±×·¡¾ß ¼Óµµ¸¦ ¸ÂÃß¸ç °¨
+        //dir.Normalize(); // ëŒ€ê°ì„  ì†ë„ ë§žì¶”ê¸° ì†ë ¥ x íž˜ì˜ í¬ê¸° x ë°©í–¥ -> íž˜ì˜ í¬ê¸°ë¥¼ 1ë¡œ ë§žì¶”ëŠ” ê²ƒ ê·¸ëž˜ì•¼ ì†ë„ë¥¼ ë§žì¶”ë©° ê°
 
-        //  30ÆÛ È®·ü    
+        //  30í¼ í™•ë¥     
         if (percent <= 31)
         {
             dir = target.transform.position - transform.position;       
@@ -31,22 +31,22 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update() 
     {
-        // ÀûÀÌ ¾Æ·¡·Î µé¾î°¡±â ---------------------------------------------
-        //  ÀûÀÌ ÀÌµ¿ÇÑ´Ù.
-        //  ¹æÇâÀº ¾Æ·¡·Î
+        // ì ì´ ì•„ëž˜ë¡œ ë“¤ì–´ê°€ê¸° ---------------------------------------------
+        //  ì ì´ ì´ë™í•œë‹¤.
+        //  ë°©í–¥ì€ ì•„ëž˜ë¡œ
         //Vector3 dirdwn = Vector3.down;
         //transform.position += dirdwn * speed *Time.deltaTime;
 
-        // ÀûÀÌ ³ª¸¦ µû¶ó´Ù´Ï±â ---------------------------------------------
+        // ì ì´ ë‚˜ë¥¼ ë”°ë¼ë‹¤ë‹ˆê¸° ---------------------------------------------
         //Vector3 follow = transform.position- target.transform.position;
         //follow.Normalize();
         //transform.position += follow * speed * Time.deltaTime;
 
 
-        // ÇÑ¹ø¿¡ ¹æÇâÀâ±â
-        // ÀÌµ¿ÇÑ´Ù
-        // ¹æÇâÀº Å¸°ÙÀ¸·Î
-        // 15¹ø ~ 16¹ø
+        // í•œë²ˆì— ë°©í–¥ìž¡ê¸°
+        // ì´ë™í•œë‹¤
+        // ë°©í–¥ì€ íƒ€ê²Ÿìœ¼ë¡œ
+        // 15ë²ˆ ~ 16ë²ˆ
         transform.position = transform.position + dir * speed * Time.deltaTime;
 
     }
