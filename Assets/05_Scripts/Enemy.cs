@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
         //dir.Normalize(); // 대각선 속도 맞추기 속력 x 힘의 크기 x 방향 -> 힘의 크기를 1로 맞추는 것 그래야 속도를 맞추며 감
 
         //  30퍼 확률    -> 그리고 타겟이 있다면(오류 수정 중)
-        if (percent <= 31 && target != null)
+        if (percent <= 31 && target != null/*!=null 생략가능 null이 아니면 true, null이면 false로 처리한다*/)
         {
             dir = target.transform.position - transform.position;       
             dir.Normalize();
@@ -62,6 +62,7 @@ public class Enemy : MonoBehaviour
     // 부딪히면 폭발효과를 발생시키고 싶다.
     private void OnCollisionEnter(Collision other)
     {
+        
         //폭발 공장에서 폭발효과를 발생시키고 싶다.
         // 필요 속성 : 폭발 공장
         // 위치
