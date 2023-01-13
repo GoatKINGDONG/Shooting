@@ -20,9 +20,9 @@ public class Bullet : MonoBehaviour
         // 3. 이동하고 싶다
         
         
-        //Vector3 dir = new Vector3(0,1, 0);
+        Vector3 dir = new Vector3(0,1, 0);
         //transform.position = transform.position + dir * speed * Time.deltaTime;
 
-        transform.position += Vector3.up * speed * Time.deltaTime;
+        transform.position += dir * speed * Time.deltaTime;
     }
 }
