@@ -8,7 +8,7 @@ public class T_Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Rigidbody rigidbody= GetComponent<Rigidbody>();
+       
     }
 
     // Update is called once per frame
