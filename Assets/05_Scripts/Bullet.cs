@@ -12,15 +12,16 @@ public class Bullet : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         // 
         // 2. 방향은 위로
         // 3. 이동하고 싶다
-        
-        
-        Vector3 dir = new Vector3(0,1, 0);
+
+
+        //Vector3 dir = new Vector3(0,1, 0); // 절대좌표기준으로 위로
+        Vector3 dir = transform.up;
         //transform.position = transform.position + dir * speed * Time.deltaTime;
 
         transform.position += dir * speed * Time.deltaTime;
