@@ -26,7 +26,7 @@ public class BgScroll : MonoBehaviour
     void Update()
     {
         // 배경을 스크롤 하고 싶다.
-        // 2. 스크롤 하고 싶다.
-        bgMat.mainTextureOffset += Vector2.right * speed * Time.deltaTime;
+        // 2. 스크롤 하고 싶다 == 이동하고 싶다!!
+        bgMat.mainTextureOffset += Vector2.right * speed * Time.deltaTime; 
     }
 }
